@@ -6,7 +6,6 @@ var dest = Vector2()
 var dir = Vector2()
 var running = false
 var nextPoint = Vector2()
-var startPos
 
 var explosion = preload("res://Scn/Explosion.tscn")
 
@@ -37,11 +36,8 @@ func explode():
 
 func reset():
 	running = false
-	position = startPos
+	position = Vector2(0,0)
+	dest = position
 	$Sprite.set_rotation(0)
 	visible = true
-	pass
-
-func _ready():
-	startPos = position
 	pass
