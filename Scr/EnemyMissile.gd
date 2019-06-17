@@ -15,10 +15,10 @@ func chooseTarget():
 	var targetNode = self
 	var numCities = get_tree().get_nodes_in_group("Cities").size()
 	var numBats = get_tree().get_nodes_in_group("Batteries").size()
-	if(rand_range(0,10) < 5 and numCities > 0):
-		targetNode = get_tree().get_nodes_in_group("Cities")[randi()%numCities]
-	elif (numBats > 0):
+	if(rand_range(0,10) < 5 and numBats > 0):
 		targetNode = get_tree().get_nodes_in_group("Batteries")[randi()%numBats]
+	elif (numCities > 0):
+		targetNode = get_tree().get_nodes_in_group("Cities")[randi()%numCities]
 	if(targetNode != self):
 		target = (targetNode.position)
 	pass

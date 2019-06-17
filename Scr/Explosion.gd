@@ -24,5 +24,6 @@ func hitExplosion():
 	pass
 
 func _on_Area2D_area_entered(area):
-	area.owner.hitExplosion()
+	if(area.owner.is_in_group("Enemies")):
+		area.owner.hitExplosion()
 	pass

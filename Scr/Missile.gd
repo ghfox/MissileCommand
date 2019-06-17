@@ -32,7 +32,7 @@ func explode():
 	visible = false
 	var ex = explosion.instance()
 	ex.position = position
-	get_node("..").add_child(ex)
+	owner.call_deferred("add_child",ex)
 	pass
 
 func reset():
