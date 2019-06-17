@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Scr/Explosion.gd" type="Script" id=1]
+[ext_resource path="res://Art/explosion.png" type="Texture" id=2]
+
+[node name="Explosion" type="Node2D" groups=[
+"Explosions",
+]]
+script = ExtResource( 1 )
+BTIME = 2
+RUNTIME = 3
+
+[node name="Sprite" type="Sprite" parent="."]
+texture = ExtResource( 2 )
