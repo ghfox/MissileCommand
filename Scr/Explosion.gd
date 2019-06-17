@@ -1,21 +1,21 @@
 extends Node2D
 
 var time = 0
-var xscale = Vector2(0,0)
-export var BTIME = 3
-export var RUNTIME = 6
+var scalex = 0.0
+export var BTIME = 1
+export var RUNTIME = 3
 
 func _ready():
-	get_node("Sprite").set_scale(xscale)
+	$Sprite.set_scale(Vector2(scalex,scalex))
 	pass
 
 func _process(delta):
 	time += delta
 	if time <= BTIME:
-		xscale = Vector2(time/BTIME,time/BTIME)
-		get_node("Sprite").set_scale(xscale * 2)
+		scalex = time/BTIME
 	else:
-		get_node("Sprite").set_visible(( (time * 15) as int % 2) > 0)
+		scalex = (RUNTIME - time) / (RUNTIME - BTIME)
 		if time >= RUNTIME:
 			queue_free()
+	$Sprite.set_scale(Vector2(scalex,scalex))
 	pass

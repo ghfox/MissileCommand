@@ -7,8 +7,6 @@
 "Explosions",
 ]]
 script = ExtResource( 1 )
-BTIME = 2
-RUNTIME = 3
 
 [node name="Sprite" type="Sprite" parent="."]
 texture = ExtResource( 2 )
