@@ -3,7 +3,6 @@
 [ext_resource path="res://Scr/Battery.gd" type="Script" id=1]
 [ext_resource path="res://Scn/Pad.tscn" type="PackedScene" id=2]
 
-
 [node name="Battery" type="Node2D"]
 script = ExtResource( 1 )
 

@@ -4,7 +4,6 @@
 [ext_resource path="res://Scn/Missile.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Art/launchPad.png" type="Texture" id=3]
 
-
 [node name="Pad" type="Node2D"]
 position = Vector2( -0.215424, 0.11792 )
 script = ExtResource( 1 )

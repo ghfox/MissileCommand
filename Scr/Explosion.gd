@@ -25,4 +25,4 @@ func hitExplosion():
 
 func _on_Area2D_area_entered(area):
 	area.owner.hitExplosion()
-	pass # Replace with function body.
+	pass
