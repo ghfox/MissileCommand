@@ -2,9 +2,10 @@ extends Node2D
 
 var target = Vector2(512,768)
 var dir = Vector2(0,0)
-export var speed = 3
+export var speed = 2
 
 func _ready():
+	add_to_group("Enemies")
 	chooseTarget()
 	dir = (target-position).normalized()
 	$Sprite.set_rotation(dir.angle() + PI/2 )

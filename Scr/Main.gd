@@ -1,10 +1,13 @@
 extends Node2D
 
 var nodeStr = "%s%d"
+var level = 0
+var enemyMissilesRemaining = 0
 
 var enemyMissile = preload("res://Scn/EnemyMissile.tscn")
 
 func _ready():
+	enemyMissilesRemaining = 20
 	pass
 	
 func _input(event):
@@ -21,11 +24,21 @@ func _input(event):
 	pass
 
 func _process(delta):
-	if(randi()%100 < 2):
-		var newMissile = enemyMissile.instance()
-		newMissile.position = Vector2(randi()%1024,0)
-		add_child(newMissile)
+	if(!fireMissile() and get_tree().get_nodes_in_group("Enemies").size() == 0):
+		resetBatteries()
+		level += 1
+		enemyMissilesRemaining = 20 + level
 	pass
+
+func fireMissile():
+	if(enemyMissilesRemaining > 0):
+		if(randi()%1000 < 5 + level):
+			var newMissile = enemyMissile.instance()
+			newMissile.position = Vector2(randi()%1024,0)
+			add_child(newMissile)
+			enemyMissilesRemaining -= 1
+		return true
+	return false
 
 func resetBatteries():
 	get_tree().call_group("Explosions","queue_free")
