@@ -40,4 +40,4 @@ func _on_Area2D_area_entered(area):
 		if(active):
 			disableBattery()
 			remove_from_group("Batteries")
-	pass # Replace with function body.
+	pass
