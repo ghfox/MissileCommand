@@ -2,6 +2,8 @@ extends Node2D
 
 var nodeStr = "%s%d"
 
+var enemyMissile = preload("res://Scn/EnemyMissile.tscn")
+
 func _ready():
 	pass
 	
@@ -17,7 +19,14 @@ func _input(event):
 	if event.is_action_pressed("ui_focus_next"):
 		resetBatteries()
 	pass
-	
+
+func _process(delta):
+	if(randi()%100 < 2):
+		var newMissile = enemyMissile.instance()
+		newMissile.position = Vector2(randi()%1024,0)
+		add_child(newMissile)
+	pass
+
 func resetBatteries():
 	get_tree().call_group("Explosions","queue_free")
 	for i in range(3):
