@@ -11,4 +11,8 @@ func _on_Area2D_area_entered(area):
 		if(is_in_group("Cities")):
 			visible = false
 			remove_from_group("Cities")
-	pass # Replace with function body.
+	pass
+
+func reset():
+	add_to_group("Cities")
+	visible = true

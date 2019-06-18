@@ -8,16 +8,23 @@ func _ready():
 	levelD = 0
 	pass 
 
-func score(val: int):
+func setScore(val: int):
 	scoreD += val
 	updateHUD()
 
-func level(val: int):
-	levelD = val
+func setLevel(val: int):
+	levelD += val
 	updateHUD()
+
+func level() -> int:
+	return levelD
+
+func score() -> int:
+	return scoreD
 
 func reset():
 	scoreD = 0
+	levelD = 0
 	updateHUD()
 
 func updateHUD():

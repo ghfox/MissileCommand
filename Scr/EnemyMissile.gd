@@ -28,6 +28,6 @@ func _process(delta):
 	pass
 
 func hitExplosion():
-	Global.score(10)
+	Global.setScore(10)
 	queue_free()
 	pass
