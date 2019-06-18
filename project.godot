@@ -19,6 +19,10 @@ config/name="Missile Command"
 run/main_scene="res://Scn/Main.tscn"
 config/icon="res://icon.png"
 
+[autoload]
+
+Global="*res://Scr/Global.gd"
+
 [display]
 
 window/size/height=768

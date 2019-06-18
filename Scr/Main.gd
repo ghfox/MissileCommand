@@ -27,6 +27,7 @@ func _process(delta):
 	if(!fireMissile() and get_tree().get_nodes_in_group("Enemies").size() == 0):
 		resetBatteries()
 		level += 1
+		Global.level(level)
 		enemyMissilesRemaining = 20 + level
 	pass
 
@@ -35,7 +36,7 @@ func fireMissile():
 		if(randi()%1000 < 5 + level):
 			var newMissile = enemyMissile.instance()
 			newMissile.position = Vector2(randi()%1024,0)
-			add_child(newMissile)
+			add_child_below_node($BG,newMissile)
 			enemyMissilesRemaining -= 1
 		return true
 	return false
