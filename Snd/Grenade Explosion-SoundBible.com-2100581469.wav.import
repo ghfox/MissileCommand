@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/Grenade Explosion-SoundBible.com-2100581469.wav-938dc3e4b0ea1f2d7ea44cc747ac9512.sample"
+
+[deps]
+
+source_file="res://Snd/Grenade Explosion-SoundBible.com-2100581469.wav"
+dest_files=[ "res://.import/Grenade Explosion-SoundBible.com-2100581469.wav-938dc3e4b0ea1f2d7ea44cc747ac9512.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0

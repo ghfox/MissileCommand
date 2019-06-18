@@ -15,6 +15,7 @@ func fireMissile(dest: Vector2) -> void:
 		if curNode.fireMissile(dest):
 			if(i == 9):
 				remove_from_group("Batteries")
+				active = false
 			return
 	pass
 

@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/Big Bomb-SoundBible.com-1219802495.wav-f05a3551fe4d0854e7c59ff7820a4774.sample"
+
+[deps]
+
+source_file="res://Snd/Big Bomb-SoundBible.com-1219802495.wav"
+dest_files=[ "res://.import/Big Bomb-SoundBible.com-1219802495.wav-f05a3551fe4d0854e7c59ff7820a4774.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0
