@@ -9,10 +9,13 @@ func _on_Area2D_area_entered(area):
 	if(node.is_in_group("Enemies")):
 		node.queue_free()
 		if(is_in_group("Cities")):
-			visible = false
+			$Sprite.visible = false
+			$Burning.visible = true
 			remove_from_group("Cities")
 	pass
 
 func reset():
+	$Sprite.visible = true
+	$Burning.visible = false
 	add_to_group("Cities")
 	visible = true
