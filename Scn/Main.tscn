@@ -74,7 +74,9 @@ Score:0"
 scroll_active = false
 
 [node name="snd_siren" type="AudioStreamPlayer2D" parent="."]
+position = Vector2( 512, 768 )
 stream = ExtResource( 6 )
 
 [node name="snd_over" type="AudioStreamPlayer2D" parent="."]
+position = Vector2( 512, 384 )
 stream = ExtResource( 7 )
