@@ -12,6 +12,7 @@ func _on_Area2D_area_entered(area):
 			$Sprite.visible = false
 			$Burning.visible = true
 			remove_from_group("Cities")
+			Global.cityDestroyed()
 	pass
 
 func reset():

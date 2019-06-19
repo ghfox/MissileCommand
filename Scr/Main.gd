@@ -28,11 +28,12 @@ func _input(event):
 	pass
 
 func _process(delta):
-	if(!fireMissile() and get_tree().get_nodes_in_group("Enemies").size() == 0):
-		if(get_tree().get_nodes_in_group("Cities").size() > 0):
-			resetBatteries()
-			Global.setLevel(1)
-			enemyMissilesRemaining = 20 + Global.level()
+	if(Global.playing):
+		if(!fireMissile() and get_tree().get_nodes_in_group("Enemies").size() == 0):
+			if(get_tree().get_nodes_in_group("Cities").size() > 0):
+				resetBatteries()
+				Global.setLevel(1)
+				enemyMissilesRemaining = 20 + Global.level()
 	pass
 
 func fireMissile():
