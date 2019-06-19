@@ -1,5 +1,20 @@
 Requires Godot 3.1 editor to open or run. Keyboard or Xinput compatible gamepad.
 
+Use your choice of missile batteries to destroy incoming nuclear warheads. Game ends when all six cities are destroyed.
+
+Move the targeting reticle:
+    Keyboard - WASD or Cursor/Arrow keys
+    Gamepad - Left stick
+Speed up reticle:
+    Keyboard - Left Shift, Ctrl or Keypad Enter
+    Gamepad - L1 or R1
+Fire Missile Battery (left,middle,right)
+    Keyboard - ZXC or Keypad 123
+    Gamepad - XAB (PlayStation Square, X, Circle)
+Reset Game:
+    Keyboard: Tab
+    Gamepad: Back or Start
+
 
 Sound Licenses
 
