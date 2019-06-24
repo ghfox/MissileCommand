@@ -1,0 +1,119 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://Scr/BonusDisplay.gd" type="Script" id=1]
+[ext_resource path="res://Snd/Electro.wav" type="AudioStream" id=2]
+[ext_resource path="res://Font/LiberationSansNarrow-Regular.ttf" type="DynamicFontData" id=3]
+
+[sub_resource type="DynamicFont" id=1]
+size = 23
+font_data = ExtResource( 3 )
+
+[node name="BonusDisplay" type="Node2D"]
+script = ExtResource( 1 )
+
+[node name="Sprites" type="Node2D" parent="."]
+
+[node name="Timer" type="Timer" parent="."]
+one_shot = true
+
+[node name="Bleep" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource( 2 )
+
+[node name="Text" type="Node2D" parent="."]
+position = Vector2( 512, 330 )
+
+[node name="Wave" type="Label" parent="Text"]
+anchor_left = 0.5
+anchor_right = 0.5
+anchor_bottom = 1.0
+margin_left = -48.0
+margin_top = -13.5
+margin_right = 48.0
+margin_bottom = 13.5
+grow_horizontal = 2
+grow_vertical = 2
+custom_fonts/font = SubResource( 1 )
+text = "Wave Clear"
+align = 1
+valign = 1
+
+[node name="Missiles" type="Label" parent="Text"]
+anchor_left = 0.5
+anchor_right = 0.5
+anchor_bottom = 1.0
+margin_left = 40.0
+margin_top = 20.0
+margin_right = 136.0
+margin_bottom = 77.0
+grow_horizontal = 2
+grow_vertical = 2
+custom_fonts/font = SubResource( 1 )
+text = "+000"
+align = 1
+valign = 1
+
+[node name="=1" type="Label" parent="Text"]
+anchor_left = 0.5
+anchor_right = 0.5
+anchor_bottom = 1.0
+margin_top = 20.0
+margin_right = 96.0
+margin_bottom = 77.0
+grow_horizontal = 2
+grow_vertical = 2
+custom_fonts/font = SubResource( 1 )
+text = "="
+align = 1
+valign = 1
+
+[node name="=2" type="Label" parent="Text"]
+anchor_left = 0.5
+anchor_right = 0.5
+anchor_bottom = 1.0
+margin_top = 80.0
+margin_right = 96.0
+margin_bottom = 137.0
+grow_horizontal = 2
+grow_vertical = 2
+custom_fonts/font = SubResource( 1 )
+text = "="
+align = 1
+valign = 1
+
+[node name="Cities" type="Label" parent="Text"]
+anchor_left = 0.5
+anchor_right = 0.5
+anchor_bottom = 1.0
+margin_left = 40.0
+margin_top = 80.0
+margin_right = 136.0
+margin_bottom = 137.0
+grow_horizontal = 2
+grow_vertical = 2
+custom_fonts/font = SubResource( 1 )
+text = "+000"
+align = 1
+valign = 1
+
+[node name="Score" type="Label" parent="Text"]
+anchor_left = 0.5
+anchor_right = 0.5
+anchor_bottom = 1.0
+margin_left = -48.0
+margin_top = 175.0
+margin_right = 48.0
+margin_bottom = 232.0
+grow_horizontal = 2
+grow_vertical = 2
+custom_fonts/font = SubResource( 1 )
+text = "Score
+"
+align = 1
+valign = 1
+
+[node name="Line2D" type="Line2D" parent="Text"]
+position = Vector2( 0, 150 )
+points = PoolVector2Array( -150, 0, 150, 0 )
+default_color = Color( 1, 1, 1, 1 )
+texture_mode = 103191872
+[connection signal="timeout" from="Timer" to="." method="tick"]

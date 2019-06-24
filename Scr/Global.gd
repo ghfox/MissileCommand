@@ -24,6 +24,13 @@ func level() -> int:
 func score() -> int:
 	return scoreD
 
+func nextLevel():
+	get_node("/root/Main").resetBatteries()
+	levelD += 1
+	get_node("/root/Main").enemyMissilesRemaining = 20 + levelD
+	playing = true
+	pass
+
 func reset():
 	get_node("/root/Main/snd_over").stop()
 	get_node("/root/Main/snd_siren").stop()

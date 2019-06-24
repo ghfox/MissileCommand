@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/Electro.wav-62e2f3e56dc9a0c039d963c8f44e0bc8.sample"
+
+[deps]
+
+source_file="res://Snd/Electro.wav"
+dest_files=[ "res://.import/Electro.wav-62e2f3e56dc9a0c039d963c8f44e0bc8.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0

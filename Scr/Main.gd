@@ -11,13 +11,14 @@ func _ready():
 	pass
 	
 func _input(event):
-	var dest = $Cross.position
-	if event.is_action_pressed("fire_left"):
-		$Battery0.fireMissile(dest)
-	if event.is_action_pressed("fire_center"):
-		$Battery1.fireMissile(dest)
-	if event.is_action_pressed("fire_right"):
-		$Battery2.fireMissile(dest)
+	if(Global.playing):
+		var dest = $Cross.position
+		if event.is_action_pressed("fire_left"):
+			$Battery0.fireMissile(dest)
+		if event.is_action_pressed("fire_center"):
+			$Battery1.fireMissile(dest)
+		if event.is_action_pressed("fire_right"):
+			$Battery2.fireMissile(dest)
 	
 	if event.is_action_pressed("reset"):
 		get_tree().call_group("Enemies","queue_free")
@@ -31,9 +32,8 @@ func _process(delta):
 	if(Global.playing):
 		if(!fireMissile() and get_tree().get_nodes_in_group("Enemies").size() == 0):
 			if(get_tree().get_nodes_in_group("Cities").size() > 0):
-				resetBatteries()
-				Global.setLevel(1)
-				enemyMissilesRemaining = 20 + Global.level()
+				$BonusDisplay.runBonus()
+				Global.playing = false
 	pass
 
 func fireMissile():
