@@ -55,6 +55,7 @@ position = Vector2( 511, 608 )
 position = Vector2( 911, 608 )
 
 [node name="Cross" type="Node2D" parent="."]
+editor/display_folded = true
 position = Vector2( 512, 384 )
 script = ExtResource( 5 )
 
