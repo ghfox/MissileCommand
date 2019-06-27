@@ -23,7 +23,9 @@ func _process(delta):
 		if time >= RUNTIME:
 			queue_free()
 	set_scale(Vector2(scalex,scalex))
+	$Sprite.get_material().set_shader_param("runtime",time)
 	pass
+
 
 func _on_Area2D_area_entered(area):
 	if(area.owner.is_in_group("Enemies")):

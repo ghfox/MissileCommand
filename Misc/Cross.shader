@@ -12,6 +12,8 @@ void fragment() {
 	if(j2 > j1)
 		j1 = j2;
 	COLOR = vec4(1.0-j1,0,0,1.0-j1);
+	if(distance(UV,vec2(0.5,0.5)) < 0.2)
+		COLOR = vec4(1.0-j1,0,0,0.0);
 //	COLOR = vec4(1.0,0,0,1.0 - j1);
 	//COLOR = vec4(0.75,0,0,1.0 - (j1+j2));
 }

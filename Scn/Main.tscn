@@ -11,15 +11,15 @@
 [ext_resource path="res://Snd/Wind-Mark_DiAngelo-1940285615.wav" type="AudioStream" id=9]
 [ext_resource path="res://Scn/BonusDisplay.tscn" type="PackedScene" id=10]
 
-[sub_resource type="ShaderMaterial" id=2]
+[sub_resource type="ShaderMaterial" id=1]
 shader = ExtResource( 6 )
 
-[sub_resource type="DynamicFontData" id=3]
+[sub_resource type="DynamicFontData" id=2]
 font_path = "res://Font/LiberationSansNarrow-Regular.ttf"
 
-[sub_resource type="DynamicFont" id=4]
+[sub_resource type="DynamicFont" id=3]
 size = 21
-font_data = SubResource( 3 )
+font_data = SubResource( 2 )
 
 [node name="Main" type="Node2D"]
 script = ExtResource( 1 )
@@ -59,7 +59,7 @@ position = Vector2( 512, 384 )
 script = ExtResource( 5 )
 
 [node name="TextureRect" type="TextureRect" parent="Cross"]
-material = SubResource( 2 )
+material = SubResource( 1 )
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
@@ -75,14 +75,14 @@ texture = ExtResource( 7 )
 stretch_mode = 1
 
 [node name="TextureRect2" type="TextureRect" parent="Cross"]
-material = SubResource( 2 )
+material = SubResource( 1 )
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-margin_left = 31.0
+margin_left = 32.0
 margin_top = -4.0
-margin_right = 95.0
+margin_right = 96.0
 margin_bottom = 60.0
 grow_horizontal = 2
 grow_vertical = 2
@@ -96,7 +96,7 @@ margin_left = 4.0
 margin_top = 2.0
 margin_right = 189.0
 margin_bottom = 63.0
-custom_fonts/normal_font = SubResource( 4 )
+custom_fonts/normal_font = SubResource( 3 )
 custom_colors/default_color = Color( 0.768627, 1, 0.509804, 1 )
 text = "Level:0
 Score:0"
